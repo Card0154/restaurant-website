@@ -23,7 +23,7 @@ body {
 
 nav {
   display: block;
-  background-color: grey;
+  background-color: darkgrey;
   margin: 0;
   overflow: hidden;
   padding: .5rem;
@@ -46,24 +46,53 @@ ol {
   float: right;
   width: 35px;
   padding: .5rem;
-  border: 2px solid black;
+  border: 2px solid grey;
   border-radius: 6px;
 }
 
 .nav-toggle:hover {
-  background-color: red;
-  border: 2px solid red;
+  background-color: grey;
+  border: 2px solid grey;
 }
 
 .banner-wrap {
-  background-color: darkgrey;
+  background-color: grey;
   display: block;
+  margin: 1rem;
 }
 
 .banner-wrap h2 {
-  margin: 0;
-  padding: 1rem;
-  font-size: 100%;
-  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  padding: 5rem 1rem 1rem 1rem;
+  font-size: 110%;
+  font-family: "Lato";
   text-align: center;
+  color: white;
+}
+
+.banner-wrap p {
+  display: block;
+  margin: 0 auto;
+  font-family: "Lato";
+  text-align: center;
+  padding-bottom: 5rem;
+  max-width: 150px;
+  color: white;
+}
+
+.banner-wrap div {
+  display: block;
+  border: 2px solid black;
+  background-color: darkgrey;
+  text-align: center;
+  padding: .5rem;
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 6px;
+}
+
+.ca-btn {
+  text-decoration: none;
+  color: white;
 }
