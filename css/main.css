@@ -33,6 +33,11 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   float: left;
   width: 50px;
@@ -59,6 +64,7 @@ ol {
   background-color: grey;
   display: block;
   margin: 1rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 
 .banner-wrap h2 {
@@ -77,14 +83,14 @@ ol {
   font-family: "Lato";
   text-align: center;
   padding-bottom: 5rem;
-  max-width: 150px;
+  max-width: 180px;
   color: white;
 }
 
 .banner-wrap div {
   display: block;
-  border: 2px solid black;
-  background-color: darkgrey;
+  border: 2px solid darkgrey;
+  background-color: grey;
   text-align: center;
   padding: .5rem;
   margin: 0 auto;
@@ -92,7 +98,102 @@ ol {
   border-radius: 6px;
 }
 
+.banner-wrap div:hover {
+  background-color: darkgrey;
+  border: 2px solid darkgrey;
+  border-radius: 6px;
+}
+
 .ca-btn {
   text-decoration: none;
   color: white;
+  border: none;
+}
+
+.card {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  border: 1px solid grey;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  margin-bottom: 1rem;
+  border: 1px solid grey;
+  padding: .5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.card a:hover {
+  background-color: grey;
+  border: 1px solid grey;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.cards {
+  padding: 2rem 2rem 2rem 2rem;
+  margin: 0 1rem 1rem 1rem;
+}
+
+.content {
+  border-top: 1px solid black;
+  text-align: center;
+}
+
+.content h2 {
+  transform: translateY(-1.4em);
+}
+
+.content h2 span {
+  display: inline-block;
+  background-color: white;
+  padding: 1rem;
+}
+
+.content div {
+  display: inline-block;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.content img {
+  display: block;
+  width: 100%;
+
+}
+
+.sect-body {
+  display: inline-block;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.sect-body h3, p, blockquote {
+  margin: 0;
+  padding: .5rem .5rem
+}
+
+.staff-member {
+padding: 0 2rem 0 2rem;
+text-align: center;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: .75rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
