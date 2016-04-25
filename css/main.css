@@ -181,12 +181,12 @@ ol {
 
 .sect-body h3, p, blockquote {
   margin: 0;
-  padding: .5rem .5rem
+  padding: .5rem .5rem;
 }
 
 .staff-member {
-padding: 0 2rem 0 2rem;
-text-align: center;
+  padding: 0 2rem 0 2rem;
+  text-align: center;
 }
 
 blockquote {
@@ -196,4 +196,13 @@ blockquote {
 
 h3 {
   font-size: 1.25rem;
+}
+
+footer {
+  background-color: darkgrey;
+  padding: .5rem;
+}
+
+.logo {
+  display: inline-block;
 }
