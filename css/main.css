@@ -17,17 +17,25 @@ html {
   box-sizing: inherit;
 }
 
+
+.clearfix::after {
+  content:" ";
+  display: block;
+  clear: both;
+}
+
 body {
   margin: 0;
 }
 
 nav {
+  position: relative;
   display: block;
   background-color: darkgrey;
   margin: 0;
-  overflow: hidden;
   padding: .5rem;
 }
+
 
 h1 {
   margin: 0;
@@ -44,8 +52,83 @@ img {
   width: 50px;
 }
 
-ol {
+.nav {
+  list-style-type: none;
   display: none;
+  background-color: darkgrey;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 49px;
+}
+
+.nav a {
+  display: block;
+  text-decoration: none;
+  padding: 0.4rem;
+  color: #000;
+}
+
+.nav a:hover {
+  background-color: black;
+  color: white;
+}
+
+.nav li:first-child a {
+  border-bottom: 0;
+}
+
+.nav li:nth-child(2) a {
+  border-bottom: 0;
+}
+
+.nav-label {
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: .3rem;
+  margin-right: .5rem;
+}
+
+.nav-open,
+.nav-close {
+  background-color: darkgrey;
+  padding: .5rem;
+  border: 2px solid grey;
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+.nav-open:hover,
+.nav-close:hover {
+  background-color: grey;
+  border: 2px solid grey;
+}
+
+.nav-close {
+  display: none;
+}
+
+.nav-check:checked ~ .nav {
+  display: block;
+}
+
+.nav-check:checked ~ .nav-label .nav-open {
+  display: none;
+}
+
+.nav-check:checked ~ .nav-label .nav-close {
+  display: block;
+}
+
+.nav-check {
+  position: absolute;
+  top: -3em;
 }
 
 .nav-toggle {
@@ -84,7 +167,7 @@ ol {
   font-family: "Lato";
   text-align: center;
   padding-bottom: 5rem;
-  max-width: 180px;
+  max-width: 170px;
   color: white;
 }
 
@@ -154,6 +237,7 @@ ol {
 }
 
 .content h2 {
+  -webkit-transform: translateY(-1.4em);
   transform: translateY(-1.4em);
 }
 
@@ -193,6 +277,7 @@ ol {
 blockquote {
   font-style: italic;
   font-size: .75rem;
+
 }
 
 h3 {
@@ -202,6 +287,10 @@ h3 {
 footer {
   background-color: darkgrey;
   padding: .5rem;
+}
+
+footer ol {
+  display: none;
 }
 
 .logo {
@@ -244,6 +333,10 @@ strong {
     font: normal 110%/1.4 Georgia, serif;
   }
 
+  .banner-wrap p {
+    max-width: 190px;
+  }
+
 }
 
 @media only screen and (min-width: 60em) {
@@ -255,12 +348,12 @@ strong {
 
   .banner-wrap {
     position: relative;
-    padding-bottom: 25rem;
+    padding-bottom: 30rem;
   }
 
   .banner-wrap p {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 39.5%;
     max-width: 190px;
     padding: 0;
@@ -276,36 +369,8 @@ strong {
   .banner-wrap h2 {
     position: absolute;
     padding: 0;
-    top: 25%;
+    top: 30%;
     left: 34%;
-  }
-
-  .nav-toggle {
-    display: none;
-  }
-
-  ol {
-    display: inline;
-    float: left;
-    width: 50%;
-    margin: 0;
-    padding-top: .3rem;
-  }
-
-  ol li {
-    display: inline;
-  }
-
-  ol li a {
-    text-decoration: none;
-    color: #fff;
-    padding: .8rem;
-    border: 2px solid darkgrey;
-  }
-
-  ol li a:hover {
-    background-color: grey;
-    border: 2px solid grey;
   }
 
   .social-media {
@@ -394,6 +459,62 @@ strong {
     margin-bottom: 5rem;
   }
 
+  blockquote {
+    padding: 0;
+  }
+
+  .nav-open,
+  .nav-close {
+    display: none;
+  }
+
+  .nav {
+    display: inline;
+    left: 70px;
+    top: 0;
+    width: 60%;
+  }
+
+  .nav li {
+    display: inline-block;
+  }
+
+  .nav li a {
+    display: inline-block;
+    padding: .73rem 1rem .73rem 1rem;
+  }
+
+  .nav li a:hover {
+    background-color: grey;
+  }
+
+  .content-alt {
+    margin-bottom: 6rem;
+  }
+
+  .content-menu {
+    margin-bottom: 7rem;
+  }
+
+  footer ol {
+    display: inline;
+    list-style-type: none;
+  }
+
+  footer ol li {
+    display: inline-block;
+  }
+
+  footer ol li a {
+    text-decoration: none;
+    color: #000;
+    padding: .6rem;
+  }
+
+  footer ol li a:hover {
+    background-color: grey;
+    color: #fff;
+  }
 }
 
 @media only screen and (min-width: 90em) {
@@ -420,12 +541,58 @@ strong {
     display: inline-block;
     width: 200px;
     text-align: center;
+    float: left;
   }
 
   .staff-member h3 {
     padding: 2rem 0 1.5rem 0;
     text-align: center;
+  }
 
+  .sect-body {
+    margin: 0;
+  }
+
+  .nav li a {
+    padding-bottom: .4rem;
+  }
+
+  .banner-wrap p {
+    left: 42.7%;
+    top: 50%;
+  }
+
+  .banner-wrap div {
+    left: 43.35%;
+  }
+
+  .banner-wrap h2 {
+    left: 38.3%;
+    top: 40%;
+  }
+
+  .banner-wrap {
+    padding: 25rem;
+  }
+
+  .card {
+    width: 31.89%;
+  }
+
+  .content-alt {
+    margin-bottom: 13rem;
+  }
+
+  .alt-body {
+    padding-top: 5rem;
+  }
+
+  .content-menu {
+    margin-bottom: 11rem;
+  }
+
+  .menu-body {
+    padding-top: 7rem;
   }
 
 }
