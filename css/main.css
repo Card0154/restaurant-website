@@ -289,21 +289,21 @@ strong {
     width: 94.5%;
     float: right;
     margin: 0;
-    padding-top: .1rem;
+    padding-top: .3rem;
   }
 
   ol li {
-    padding: 1rem;
     display: inline;
-    border: 2px solid darkgrey;
   }
 
   ol li a {
     text-decoration: none;
     color: #fff;
+    padding: 1rem;
+    border: 2px solid darkgrey;
   }
 
-  ol li:hover {
+  ol li a:hover {
     background-color: grey;
     border: 2px solid grey;
   }
