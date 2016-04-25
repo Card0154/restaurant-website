@@ -36,6 +36,7 @@ h1 {
 h2 {
   margin: 0;
   padding: 0;
+  color: green;
 }
 
 img {
@@ -199,10 +200,33 @@ h3 {
 }
 
 footer {
+  position: relative;
   background-color: darkgrey;
   padding: .5rem;
 }
 
 .logo {
-  display: inline-block;
+  display: block;
+  width: 50px;
+}
+
+.media-icon {
+  display: inline;
+}
+
+.media-icon img {
+  width: 35px;
+  padding: 0 0 0 .2rem;
+  float: right;
+}
+
+.copyright {
+  display: block;
+  clear: both;
+  padding: .5rem 0 0 0;
+  font-size: .75rem;
+}
+
+strong {
+  color: green;
 }
