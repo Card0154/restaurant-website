@@ -322,6 +322,76 @@ strong {
     display: inline-block;
     width: 31.12%;
     margin: .5rem;
+    margin-bottom: 2rem;
+  }
+
+  .staff-member img {
+    display: inline;
+    width: 50%;
+    padding-right: .5rem;
+  }
+
+  .sect-body {
+    display: inline;
+    width: 40%;
+    text-align: left;
+    padding-top: 5rem;
+  }
+
+  .sect-body h3 {
+    padding-bottom: 1.5rem;
+  }
+
+  .sect-body p {
+    padding-bottom: 1.5rem;
+  }
+
+  .staff-member:nth-child(5) {
+    margin-bottom: 5rem;
+  }
+
+  .alt-img {
+    padding-left: 2rem;
+    float: left;
+    width: 46%;
+    display: inline;
+  }
+
+  .alt-body {
+    display: inline;
+    width: 40%;
+    text-align: left;
+    padding-top: 1rem;
+  }
+
+  .alt-body p {
+    padding-left: 0;
+  }
+
+  .alt {
+    margin-bottom: 5rem;
+  }
+
+  .menu-img {
+    padding-left: 2rem;
+    float: left;
+    width: 46%;
+    display: inline;
+  }
+
+  .menu-body {
+    display: inline;
+    width: 40%;
+    text-align: left;
+    padding-top: 1rem;
+  }
+
+  .menu-body p {
+    padding-left: 0;
+  }
+
+  .menu {
+    margin-bottom: 5rem;
   }
 
 }
@@ -331,6 +401,31 @@ strong {
   body {
     font-size: 130%;
     line-height: 1.5;
+  }
+
+  .staff-member {
+    display: inline;
+    width: 20%;
+    position: relative;
+  }
+
+  .staff-member img {
+    position: absolute;
+    left: 32%;
+    width: 40%;
+  }
+
+  .staff-member p {
+    padding: 0 0 .5rem 0;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+  }
+
+  .staff-member h3 {
+    padding: 2rem 0 1.5rem 0;
+    text-align: center;
+
   }
 
 }
