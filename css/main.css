@@ -253,12 +253,31 @@ strong {
     line-height: 1.4;
   }
 
+  .banner-wrap {
+    position: relative;
+    padding-bottom: 25rem;
+  }
+
   .banner-wrap p {
-    max-width: 200px;
+    position: absolute;
+    top: 40%;
+    left: 39.5%;
+    max-width: 190px;
+    padding: 0;
   }
 
   .banner-wrap div {
+    position: absolute;
+    bottom: 5%;
+    left: 40.5%;
     width: 180px;
+  }
+
+  .banner-wrap h2 {
+    position: absolute;
+    padding: 0;
+    top: 25%;
+    left: 34%;
   }
 
   .nav-toggle {
